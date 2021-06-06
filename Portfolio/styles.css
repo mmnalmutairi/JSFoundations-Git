@@ -1,0 +1,450 @@
+@import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap'); 
+
+:root{
+    --pink:#ffcad4;
+    --Red: #ff0035;
+    --Grey: #343a40;
+}
+
+*{
+    font-family: 'Mate SC', serif;
+    margin: 0; padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    outline: none; border: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+
+*::selection{
+    background: white;
+    color: var(--Grey);
+}
+
+html{
+    font-size: 60%;
+    overflow-x: hidden ;
+}
+html::-webkit-scrollbar{
+    width: 0.3cm;
+}
+html::-webkit-scrollbar-track{
+    background: var(--Grey);
+}
+html::-webkit-scrollbar-thumb{
+    background: var(--Red);
+}
+
+
+body {
+    background-color: black;
+    background-image: url("IMG_4602.JPG");
+    background-size: auto;
+    overflow-x: hidden;
+}
+
+
+/* GRID BACKGROUND */
+.row  .col{
+    background-color: black;
+}
+
+header{
+    font-style: italic;
+    z-index: 1000;
+    height: 100%;
+    width: 7cm;
+    top: 0cm;
+    left: 0cm;
+    background: var(--Grey);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    color: var(--Red);
+    position:fixed;
+    text-align: center;
+    
+}
+
+header .user img{
+height: 4cm;
+width: 4cm;
+border-radius: 50%;
+object-fit: fill;
+margin-bottom: 0.4cm;
+border: 0.2cm solid var(--Red);
+}
+
+header .user .name{
+    font-size: 0.9cm;
+    font-family: 'Mate SC', serif;
+    color: #ffff;
+}
+
+header .user .post{
+    font-size: 0.7cm;
+    font-family: 'Times New Roman', Times, serif;
+    color: #bfc3ba;
+}
+
+header .navbar{
+    width: 90%;
+}
+
+header .navbar ul{
+list-style:none;
+padding: 0.1cm 0.4cm;
+}
+
+header .navbar ul li a{
+    display:block;
+    padding: 0.2cm;
+    margin: 0.3cm 0;
+    font-weight: bold;
+    background-color: #bfc3ba ;
+    color: #2f2235;
+    font-size: 0.5cm;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border-radius: 1cm;
+}
+
+header .navbar ul li a:hover{
+    background: var(--Red);
+}
+#Bars {
+    position: fixed;
+    top: 0.8cm; right: 0.8cm;
+    background: white;
+    color:#ffff;
+    cursor: pointer;
+    font-size: 1cm;
+    padding: 0.2cm 0.5cm;
+    z-index: 1000;
+    display: none;
+
+}
+h2{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-top: 3px;
+    color: white;
+    text-align: center;
+    text-shadow: var(--Red);
+}
+
+.Home{
+    display:flex;
+    align-items:flex-start;
+    flex-flow: column;
+    padding: 0 1cm;
+    color: white;
+    justify-content:center;
+    
+}
+
+.Home h3{
+font-family:'Times New Roman', Times, serif;
+font-size: 0.8cm;
+color: var(--Red);
+}
+
+.Home h1{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 1.5cm;
+    color: white;
+    }
+
+    .Home h1 span{
+        color: var(--Red);
+    }
+
+.Home{
+min-height: 100px;
+padding: 1cm;
+}
+.Home p{
+    font-family:'Times New Roman', Times, serif;
+    font-size: 0.5cm;
+    color: White;
+    padding: 0.4cm 0;
+}
+
+.button{
+    padding: 0.3cm 0.9cm;
+    background: var(--Grey);
+    color: white;
+    cursor: pointer;
+    margin-top: 0.2cm;
+    font-size: 0.5cm;
+    border-radius: 0.7cm;
+    font-family: 'Times New Roman', Times, serif;
+
+
+}
+.button:hover{
+    background: var(--Red);
+}
+
+.heading{
+    text-align: center;
+    margin: 0 2cm;
+    font-size: 1cm;
+    padding: 0.4cm;
+    border-bottom: 0.1rem solid #240046;
+    color: white;
+}
+
+.heading span{
+    color: var(--Red);
+}
+
+.about .row{
+display: flex;
+align-items: center;
+justify-content: center;
+flex-wrap: wrap;
+padding: 0.2cm 0;
+
+}
+
+.about .row .counter{
+    flex: 1 1 10cm;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 2cm;
+    padding-right: 1cm;
+}
+.about .row .info{
+    flex: 1 1 20cm;
+    padding: 1cm 0.5cm;
+    padding-left: 1cm;
+}
+.about .row .info h3{
+    font-size: 0.5cm;
+    color: var(--Red);
+    padding: 0.2cm 0;
+    font-weight: normal;
+}
+
+.about .row .info h3 span{
+    color:white;
+    padding: 0 0.1cm;
+}
+
+
+.about .row .counter .box{
+    width: 4cm;
+    height: 4cm;
+    background: white;
+    text-align: center;
+    padding: 0.5cm;
+    margin: 0.5cm;
+}
+
+.about .row .counter .box span{
+
+    font-size: 1.5cm;
+    color: #07010f;
+}
+
+.about .row .counter .box h3{
+
+    font-size: 0.5cm;
+    color: var(--Red);
+}
+
+.interests .box-container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0.5cm to 0;
+    padding-left: 6cm;
+
+}
+
+.interests .box-container .box{
+width:11cm;
+margin: 1.8cm 0.4cm;
+padding-left: 1cm ;
+border-left: 0.2cm solid #ffff;
+position: relative;
+
+}
+
+.interests .box-container .box span{
+    font-size: 0.7cm;
+    background: var(--Red);
+    border-radius: 2cm;
+    color: #ffff;
+    }
+
+.interests .box-container .box h3{
+        font-size: 0.9cm;
+        color: var(--Red);
+        padding-top: 0.2cm;
+    }
+
+.interests .box-container .box p{
+        font-size: 0.4cm;
+        color: #eee;
+        padding-top: 0.4cm;
+    }
+    .interests .box-container .box i{
+        position:relative;
+        top:-1.2cm;
+        left: -1.6cm;
+        font-size: 0.5cm;
+        color: white;
+
+
+    }
+
+    .hobbies .box-container{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        /* padding: 0.5cm; */
+        padding: auto;
+   }
+
+    .hobbies .box-container .box{
+        height: 4cm;
+        width: 6cm;
+        border-radius: 0.2cm;
+        margin: 0.1cm;
+        overflow: hidden;
+        cursor: pointer;
+
+    }
+
+    .hobbies .box-container .box img{
+
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .hobbies .box-container .box:hover img{
+        transform: scale(1.2);
+
+    }
+
+    .contact .row{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .contact .row .content{
+        flex: 1 1 11cm;
+        padding: 1cm;
+        padding-bottom: 0;
+    }
+
+    /* .contact .row form{
+        flex: 1 1 45rem;
+        padding: 2rem;
+        margin: 2rem;
+        margin-bottom: 4rem;
+
+    }    
+
+    .contact .row form .box{
+        padding: 1rem;
+        margin: 1rem 0;
+        background: black;
+        color: #ffff;
+        text-transform: none;
+        font-size: 1.7rem;
+        width: 100%
+    }
+
+    .contact .row form .message{
+        height: 6cm;
+        resize: none;
+
+    } */
+
+    .contact .row .content .title{
+        text-transform: uppercase;
+        color: white;
+        font-size: 0.8cm;
+        padding-bottom: 0.7cm;
+    }
+
+    .contact .row .content .info h3{
+        display: flex;
+        align-items: center;
+        font-size: 0.4cm;
+        color: white;
+        padding: 0.4cm 0;
+        font-weight: normal;
+    }
+
+
+
+
+/* p{
+    font-size: 15pt;
+    font-weight: bolder;
+    color: #ea526f;
+    padding-bottom: 3px;
+}
+
+ul{
+    font-size: 15pt;
+    font-weight: bolder;
+    padding-bottom: 3px;
+    color: #ea526f;
+} */
+
+img{
+
+    box-sizing: border-box;
+}
+
+
+@media (max-width: 1200px){
+    html{
+        font-size: 55%;
+    }
+    .Home{
+        padding: 0.3cm 1cm;
+    }
+}
+
+@media (max-width: 991px){
+    /* header{
+        left: -120%
+    } */
+    .Home{
+        width: 100%;
+    }
+
+    .Bars{
+        display: block;
+    }
+    .heading{
+        margin: 0 1cm;
+
+    }
+
+    .about .row .counter .box{
+        width: 100%;
+    }
+
+    .hobbies .box-container .box{
+        width: 100%;
+    }
+
+
+}
+
+body{
+
+    padding: 8cm;
+}
