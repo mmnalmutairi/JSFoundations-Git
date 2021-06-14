@@ -36,6 +36,24 @@ export const Button = styled.button`
 font-size: 20px;
 margin: 2em;
 border-radius: 14px;
+padding: 0.25em 1em;
 background-color: ${props => props.theme.mainColor};
 color: ${props => props.theme.backgroundColor};
+`;
+
+export const BookWrapper = styled.div`
+display: block;
+margin-left: auto;
+margin-right: auto;
+width: 70%;
+
+img {
+    width: 30%;
+    float: left;
+    margin-right: 20px;
+}
+
+p {
+    vertical-align: middle;
+}
 `;

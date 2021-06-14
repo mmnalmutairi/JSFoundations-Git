@@ -5,6 +5,7 @@ import { Title, Description, Image, Button } from './components/styles';
 // import Home from "./components/Home";
 import { useState } from "react";
 import { GlobalStyle } from './components/styles';
+import BookDetail from './components/BookDetails';
 
 const theme = {
   light: {
@@ -19,9 +20,15 @@ const theme = {
 
 function App() {
   const [currentTheme, setCurrentTheme] = useState("light");
+  const [book, setbook] = useState();
   const toggleTheme = () => {
     if (currentTheme === "light") setCurrentTheme("dark");
     else setCurrentTheme("light");
+  };
+
+  const setView = () => {
+    return book ? (<BookDetail book={book} />) :
+      (<BookList setbook={setbook} />);
   };
   return (
     <div>
@@ -37,7 +44,7 @@ function App() {
             className="shop-image"
           />
         </div>
-        <BookList />
+        {setView()}
       </ThemeProvider>
     </div>
 

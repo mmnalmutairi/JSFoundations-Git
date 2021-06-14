@@ -3,11 +3,11 @@ import Books from "../Books";
 import Booksitem from "./BookItem";
 import SearchBar from "./SearchBar";
 
-const BookList = () => {
+const BookList = (props) => {
     const [query, setQuery] = useState(null);
-    const filteredBooks = Books.filter(book => book.name.includes(query));
+    const filteredBooks = Books.filter(book => book.name.toLowerCase().includes(query));
     const BooksList = filteredBooks.map((book) => (
-        <Booksitem name={book.name} image={book.image} key={book.id} />
+        <Booksitem book={book} setBook={props.setBook} />
     ));
     return (
         <div>
